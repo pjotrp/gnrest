@@ -15,6 +15,9 @@ module GNRest
       get :server do
         :ok
       end
+      get :database do
+        :test
+      end
     end
   end
 end

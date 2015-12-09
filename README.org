@@ -19,11 +19,16 @@ The initial calls will fetch
    correlations
 4. list of phenotypes with QTL in a given interval
 
-Data is in JSON format matching the data structures used by [[http://rqtl.org/][R/qtl]].  In
-the examples here we use the base URL http://api.genenetwork.org/
-which is the main GN server in Memphis. When self-hosting the REST
-server, simply change the base URL. For more information see
-[[INSTALL.org]].
+Data is in JSON format matching the data structures used by [[http://rqtl.org/][R/qtl]]. 
+
+To create a testing framework for your client REST API without running
+a MySQL backend we also add a test api which mocks the database when
+no database hook is available.
+
+In the examples here we use the base URL http://api.genenetwork.org/
+which is the main GN server in Memphis. When running locally use
+http://localhost:9292/.  When self-hosting the REST server, simply
+change the base URL. For more information see [[INSTALL.org]].
 
 Note that at this moment the REST API is in a prototyping stage. 
 
