@@ -1,0 +1,44 @@
+* RESTful API for GeneNetwork (prototype)
+
+** Introduction
+
+GeneNetwork ([[http://genenetwork.org/]]) is a website for systems
+genetics (which can be hosted locally) and consists of a database, a
+web UI and an assortment of tools.
+
+To make both data and tools programmatically available from R, Python
+etc. we are implementing a new REST API which can be run independently of 
+the GN webserver. At this moment the REST API
+is in a prototyping stage.
+
+The initial calls will fetch
+
+1. genotype and phenotype data
+2. genome scan results for a particular phenotype
+3. list of phenotypes that correlate with a particular one, and the
+   correlations
+4. list of phenotypes with QTL in a given interval
+
+Data is in JSON format matching the data structures used by [[http://rqtl.org/][R/qtl]].  In
+the examples here we use the base URL http://api.genenetwork.org/
+which is the main GN server in Memphis. When self-hosting the REST
+server, simply change the base URL. For more information see
+[[INSTALL.org]].
+
+** Fetch genotype information
+
+nyi
+
+** Fetch phenotype information
+
+nyi
+
+** Genome scans
+
+nyi
+
+** Correlate phenotypes
+
+nyi
+
+** List phenotypes with matching QTL
