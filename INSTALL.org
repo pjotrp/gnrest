@@ -1,0 +1,11 @@
+* Install
+
+GNRest API currently uses Grape + Rack. Install Grape and run
+
+    rackup
+
+in the checked out source repository. When running curl it should
+respond with ok:
+
+    curl http://localhost:9292/api/status/server/
+      "ok"
