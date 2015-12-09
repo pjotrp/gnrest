@@ -12,9 +12,6 @@ module GNRest
       get :version do
         "0.0.1"
       end
-      get :server do
-        "ok"
-      end
       get :database do
         "testmode"
       end

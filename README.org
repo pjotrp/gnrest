@@ -7,9 +7,7 @@ genetics (which can be hosted locally) and consists of a database, a
 web UI and an assortment of tools.
 
 To make both data and tools programmatically available from R, Python
-etc. we are implementing a new REST API which can be run independently
-of the GN webserver. 
-
+etc. we are implementing a new REST API which can be run independently. 
 
 The initial calls will fetch
 
@@ -25,12 +23,25 @@ To create a testing framework for your client REST API without running
 a MySQL backend we also add a test api which mocks the database when
 no database hook is available.
 
-In the examples here we use the base URL http://api.genenetwork.org/
-which is the main GN server in Memphis. When running locally use
-http://localhost:9292/.  When self-hosting the REST server, simply
-change the base URL. For more information see [[INSTALL.org]].
+In the examples here we use the local installation URL
+http://localhost:9292/. Replace this with http://api.genenetwork.org/
+which is the main GN server in Memphis. When using your own database
+with a self-hosting the REST server, simply change the base URL to
+your own. For more information see [[INSTALL.org]].
 
-Note that at this moment the REST API is in a prototyping stage. 
+Note that at this moment the REST API is in a prototyping stage. We
+expect to have something generally useful in spring 2016.
+
+** Fetch status
+
+Some methods are defined to get version information and database status. E.g.
+
+: curl http://localhost:9292/api/status/version
+:   "0.0.1"
+: curl http://localhost:9292/api/status/database
+:   "testmode"
+
+See also the specification [[spec/status_spec.rb]]
 
 ** Fetch genotype information
 
