@@ -10,13 +10,13 @@ module GNRest
     resource :status do
       desc 'Returns status'
       get :version do
-        '0.0.1'
+        "0.0.1"
       end
       get :server do
-        :ok
+        "ok"
       end
       get :database do
-        :test
+        "testmode"
       end
     end
   end

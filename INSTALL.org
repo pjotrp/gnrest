@@ -7,5 +7,10 @@ GNRest API currently uses Grape + Rack. Install Grape and run
 in the checked out source repository. When running curl it should
 respond with ok:
 
-    curl http://localhost:9292/api/status/server/
-      "ok"
+: curl http://localhost:9292/api/status/server/
+:   "ok"
+
+when running without a database it should respond in testmode
+
+: curl http://localhost:9292/api/status/database
+:   "testmode"
